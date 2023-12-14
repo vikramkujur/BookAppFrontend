@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18
+      nodejs: 20
    
     commands:
         # install npm
@@ -11,6 +11,7 @@ phases:
         - npm install
         - npm audit
         - npm audit fix --force
+        - npm update
         - node -v
         - npm -v
         - rm -rf node_modules package-lock.json
